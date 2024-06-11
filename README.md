@@ -13,6 +13,27 @@ This project is a simple task manager application built with React. It demonstra
 
 To run this project locally, follow these steps:
 
-Clone the repository:
+1. Clone the repository:
 
-    git clone https://github.com/your-username/task-manager.git
+   git clone https://github.com/Zogarish/Learn-React-s-useReducer-Hook-Simplify-Complex-State.git
+
+2. Navigate to the project directory:
+
+   cd Learn-React-s-useReducer-Hook-Simplify-Complex-State
+
+3. Install the dependencies:
+
+   npm install
+
+4. Start the development server:
+
+   npm start
+
+This will run the app in development mode. Open http://localhost:3000 to view it in your browser. The page will reload when you make changes. You may also see any lint errors in the console
+
+## Learn More
+
+To learn more about the useReducer hook and how it can simplify complex state management in React, check out the following resources:
+
+- Reducers - Reactjs.org
+- A Guide to the useReducer Hook - DigitalOcean
