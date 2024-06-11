@@ -51,21 +51,6 @@ This will run the app in development mode. Open http://localhost:3000 to view it
 
 To learn more about the `useReducer` hook and how it can simplify complex state management in React, check out the following resources:
 
+- [Reducers - Reactjs.org]
+- [A Guide to the useReducer Hook - DigitalOcean]
 - [Reducers - Reactjs.org](https://legacy.reactjs.org/docs/hooks-reference.html#usereducer "Reducers - Reactjs.org")
-- [A Guide to the useReducer Hook - DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-manage-state-with-hooks-on-react-components "A Guide to the useReducer Hook - DigitalOcean")
-
-## Video Tutorial
-
-For a step-by-step video tutorial on how to build this task manager application using the `useReducer` hook, check out the following YouTube video:
-
-Learn React's useReducer Hook: Simplify Complex State
-The video covers the following topics:
-
-- Understanding the Reducer Pattern
-- Creating Reducers
-- Using the useReducer Hook
-- Building a Task Manager Application
-
-## License
-
-This project is open-source and available under the [MIT License](https://opensource.org/license/MIT "MIT License").
