@@ -1,6 +1,6 @@
 # Task Manager App: Learn React's useReducer Hook
 
-This project is a simple task manager application built with React. It demonstrates how to use the useReducer hook to manage complex state in a React component. The useReducer hook is an alternative to the useState hook and is particularly useful when dealing with state that has multiple sub-values or when the state logic involves complex updates.
+This project is a simple task manager application built with React. It demonstrates how to use the `useReducer` hook to manage complex state in a React component. The `useReducer` hook is an alternative to the `useState` hook and is particularly useful when dealing with state that has multiple sub-values or when the state logic involves complex updates.
 
 ## Features
 
@@ -49,7 +49,8 @@ This will run the app in development mode. Open http://localhost:3000 to view it
 
 ## Learn More
 
-To learn more about the useReducer hook and how it can simplify complex state management in React, check out the following resources:
+To learn more about the `useReducer` hook and how it can simplify complex state management in React, check out the following resources:
 
-- Reducers - Reactjs.org
-- A Guide to the useReducer Hook - DigitalOcean
+- [Reducers - Reactjs.org]
+- [A Guide to the useReducer Hook - DigitalOcean]
+- [Reducers - Reactjs.org](https://legacy.reactjs.org/docs/hooks-reference.html#usereducer "Reducers - Reactjs.org")
