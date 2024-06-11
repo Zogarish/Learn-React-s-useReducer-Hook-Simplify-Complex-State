@@ -1,15 +1,18 @@
-# Learn React's useReducer Hook: Simplify Complex State
+# Task Manager App: Learn React's useReducer Hook
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a simple task manager application built with React. It demonstrates how to use the useReducer hook to manage complex state in a React component. The useReducer hook is an alternative to the useState hook and is particularly useful when dealing with state that has multiple sub-values or when the state logic involves complex updates.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Add new tasks to the task list
+- Mark tasks as completed
+- Filter tasks based on completion status (All, Completed, Incomplete)
+- Persist tasks in the browser's local storage
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+To run this project locally, follow these steps:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Clone the repository:
+
+    git clone https://github.com/your-username/task-manager.git
