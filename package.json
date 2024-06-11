@@ -12,6 +12,7 @@
     "web-vitals": "^2.1.4"
   },
   "devDependencies": {
+    "postcss": "^8.4.38",
     "react-scripts": "4.0.3"
   },
   "scripts": {
