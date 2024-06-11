@@ -29,15 +29,21 @@ git clone https://github.com/your-username/Learn-React-s-useReducer-Hook-Simplif
 
 3. Navigate to the project directory:
 
-`cd Learn-React-s-useReducer-Hook-Simplify-Complex-State`
+```
+cd Learn-React-s-useReducer-Hook-Simplify-Complex-State
+```
 
 4. Install the dependencies:
 
-`npm install`
+```
+npm install
+```
 
 5. Start the development server:
 
-`npm start`
+```
+npm start
+```
 
 This will run the app in development mode. Open http://localhost:3000 to view it in your browser. The page will reload when you make changes. You may also see any lint errors in the console
 
