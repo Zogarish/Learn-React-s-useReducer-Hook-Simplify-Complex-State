@@ -13,19 +13,26 @@ This project is a simple task manager application built with React. It demonstra
 
 To run this project locally, follow these steps:
 
-1. Clone the repository:
+1. Fork the repository:
 
-`git clone https://github.com/Zogarish/Learn-React-s-useReducer-Hook-Simplify-Complex-State git`
+- Go to the repository: https://github.com/Zogarish/Learn-React-s-useReducer-Hook-Simplify-Complex-State
+- Click on the "Fork" button at the top right corner of the page.
+- This will create a copy of the repository in your GitHub account.
 
-2. Navigate to the project directory:
+2. Clone the forked repository:
+
+`git clone https://github.com/your-username/Learn-React-s-useReducer-Hook-Simplify-Complex-State.git`
+Replace `your-username` with your actual GitHub username.
+
+3. Navigate to the project directory:
 
 `cd Learn-React-s-useReducer-Hook-Simplify-Complex-State`
 
-3. Install the dependencies:
+4. Install the dependencies:
 
 `npm install`
 
-4. Start the development server:
+5. Start the development server:
 
 `npm start`
 
