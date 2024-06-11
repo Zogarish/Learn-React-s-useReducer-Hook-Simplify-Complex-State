@@ -15,19 +15,19 @@ To run this project locally, follow these steps:
 
 1. Clone the repository:
 
-   git clone https://github.com/Zogarish/Learn-React-s-useReducer-Hook-Simplify-Complex-State.git
+````git clone https://github.com/Zogarish/Learn-React-s-useReducer-Hook-Simplify-Complex-State git
 
 2. Navigate to the project directory:
 
-   cd Learn-React-s-useReducer-Hook-Simplify-Complex-State
+```cd Learn-React-s-useReducer-Hook-Simplify-Complex-State
 
 3. Install the dependencies:
 
-   npm install
+```npm install
 
 4. Start the development server:
 
-   npm start
+```npm start
 
 This will run the app in development mode. Open http://localhost:3000 to view it in your browser. The page will reload when you make changes. You may also see any lint errors in the console
 
@@ -37,3 +37,4 @@ To learn more about the useReducer hook and how it can simplify complex state ma
 
 - Reducers - Reactjs.org
 - A Guide to the useReducer Hook - DigitalOcean
+````
