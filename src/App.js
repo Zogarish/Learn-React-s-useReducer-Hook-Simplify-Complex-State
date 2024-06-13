@@ -1,5 +1,5 @@
 import React, { useState, useReducer } from "react"; // Import the useState and useReducer hooks
-import "./App.css"; // Import the App.css file to style the app
+import "./App.css"; // Import the App.css file to style the application
 
 // Create a function component called App for Task Manager Functionality
 function App() {
