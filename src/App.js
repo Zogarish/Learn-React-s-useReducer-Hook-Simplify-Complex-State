@@ -1,57 +1,67 @@
-import React, { useState } from "react";
-import "./App.css";
+import React, { useState, useReducer } from "react"; // Import the useState and useReducer hooks
+import "./App.css"; // Import the App.css file to style the app
 
+// Create a function component called App for Task Manager Functionality
 function App() {
   // State to store the list of tasks
   const [tasks, setTasks] = useState([]);
 
-  // State to store the input value for a new task
+  // State to store the value of the new task input
   const [newTask, setNewTask] = useState("");
 
   // State to store the filter option (all, completed, or incomplete)
   const [filter, setFilter] = useState("all");
+
   // Function to handle adding a new task
   const addTask = () => {
+    // Check if the new task input is not empty by trimming the value removing any white spaces
     if (newTask.trim() !== "") {
+      // Create a new task object with an id, text, and completed status
       const task = {
-        id: Date.now(),
-        text: newTask,
-        completed: false,
+        id: Date.now(), // Use the current date and time as the id
+        text: newTask, // Set the text of the task to the value of the new task input
+        completed: false, // Set the completed status of the task to false
       };
-      setTasks([...tasks, task]);
-      setNewTask("");
+      setTasks([...tasks, task]); // Update the task state using the spread operator to create a new array with the new task and the existing tasks
+      setNewTask(""); // Reset the new task input value to an empty string
     }
   };
 
   // Function to handle marking a task as completed
   const toggleTaskCompletion = (taskId) => {
+    // Map over the tasks and update the completed status of the task with the matching id
     const updatedTasks = tasks.map((task) => {
+      // Check if the task id matches the id of the task being marked as completed
       if (task.id === taskId) {
         return { ...task, completed: !task.completed };
       }
-      return task;
+      return task; // Return the task if there is no match
     });
-    setTasks(updatedTasks);
+    setTasks(updatedTasks); // Update the tasks state with the updated tasks
   };
 
-  // Function to handle filtering task based on completion status
+  // Function to handle filtering tasks based on completion status
   const filterTasks = () => {
+    // Check the value filter is completed then Filter the tasks to only include completed tasks
     if (filter === "completed") {
       return tasks.filter((task) => task.completed);
-    } else if (filter === "incomplete") {
+    }
+    // Check the value filter is incomplete then Filter the tasks to only include incomplete tasks
+    else if (filter === "incomplete") {
       return tasks.filter((task) => !task.completed);
     }
-    return tasks;
+    return tasks; // Return all tasks if the filter value is all
   };
 
+  // Return the JSX for the App component
   return (
     <div className="App">
-      <h1> Task Manager </h1>
+      <h1>Task Manager</h1>
       <div>
         <input
           type="text"
-          value={newTask}
-          onChange={(e) => setNewTask(e.target.value)}
+          value={newTask} // Set the value of the input to the newTask state
+          onChange={(e) => setNewTask(e.target.value)} // Update the newTask state with the value of the input
           placeholder="Enter a new task"
         />
         <button onClick={addTask}>Add Task</button>
@@ -89,6 +99,7 @@ function App() {
         {filterTasks().map((task) => (
           <li key={task.id}>
             <span
+              // Add a style attribute to conditionally apply a line-through style to the task text
               style={{
                 textDecoration: task.completed ? "line-through" : "none",
               }}
