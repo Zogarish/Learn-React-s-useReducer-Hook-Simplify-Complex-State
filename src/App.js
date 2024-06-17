@@ -1,16 +1,16 @@
-import React, { useState, useReducer } from "react"; // Import the useState and useReducer hooks
+import React, { useReducer } from "react"; // Import the useReducer hooks
 import "./App.css"; // Import the App.css file to style the application
-import { initialState, reducer, actionType } from "./reducer";
+import { initialState, reducer, actionType } from "./reducer"; // Import the initialState, reducer, and actionType from the reducer file
 import {
   addTask,
   toggleTaskCompletion,
   filterTasks,
   deleteTask,
-} from "./takeActions";
+} from "./takeActions"; // Import the addTask, toggleTaskCompletion, filterTasks, and deleteTask functions
 
 // Create a function component called App for Task Manager Functionality
 function App() {
-  const [state, dispatch] = useReducer(reducer, initialState);
+  const [state, dispatch] = useReducer(reducer, initialState); // Use the useReducer hook to create a state and dispatch function
 
   // Return the JSX for the App component
   return (
@@ -25,7 +25,8 @@ function App() {
           } // Update the newTask state with the value of the input
           placeholder="Enter a new task"
         />
-        <button onClick={() => addTask(state, dispatch)}>Add Task</button>
+        <button onClick={() => addTask(state, dispatch)}>Add Task</button>{" "}
+        {/* Call the addTask function with the state and dispatch as arguments */}
       </div>
       <div>
         <label>

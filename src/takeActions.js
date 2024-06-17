@@ -1,4 +1,4 @@
-import { actionType } from "./reducer";
+import { actionType } from "./reducer"; // Import the actionType from the reducer file
 
 // Function to handle adding a new task
 export const addTask = (state, dispatch) => {
@@ -10,7 +10,7 @@ export const addTask = (state, dispatch) => {
       text: state.newTask, // Set the text of the task to the value of the new task input
       completed: false, // Set the completed status of the task to false
     };
-    dispatch({ type: actionType.ADD_TASK, payload: task });
+    dispatch({ type: actionType.ADD_TASK, payload: task }); // Update the tasks state with the new task
   }
 };
 
@@ -32,6 +32,7 @@ export const filterTasks = (state) => {
   return state.tasks; // Return all tasks if the filter value is all
 };
 
+// Function to handle deleting a task
 export const deleteTask = (taskId, dispatch) => {
   dispatch({ type: actionType.DELETE_TASK, payload: taskId });
 };
