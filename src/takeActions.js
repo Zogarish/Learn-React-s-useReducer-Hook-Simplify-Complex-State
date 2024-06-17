@@ -2,15 +2,28 @@ import { actionType } from "./reducer"; // Import the actionType from the reduce
 
 // Function to handle adding a new task
 export const addTask = (state, dispatch) => {
-  // Check if the new task input is not empty by trimming the value removing any white spaces
-  if (state.newTask.trim() !== "") {
-    // Create a new task object with an id, text, and completed status
-    const task = {
+  const newTaskText = state.newTask.trim(); // Trim the new task input value to remove any white spaces
+  // Check if the new task input is not empty and find if the task already exists
+  const existingTasks = state.tasks.find((task) => task.text === newTaskText); // Find if the task already exists in the tasks array
+  if (existingTasks) {
+    alert("Task already exists! Please enter a different task."); // Alert the user if the task already exists
+  } else {
+    const newTask = {
       id: Date.now(), // Use the current date and time as the id
-      text: state.newTask, // Set the text of the task to the value of the new task input
+      text: newTaskText, // Set the text of the task to the value of the new task input
       completed: false, // Set the completed status of the task to false
     };
-    dispatch({ type: actionType.ADD_TASK, payload: task }); // Update the tasks state with the new task
+    dispatch({ type: actionType.ADD_TASK, payload: newTask }); // Update the tasks state with the new task
+  }
+};
+
+// Function to handle Add Task Button
+export const handleAddTask = (state, dispatch) => {
+  const newTaskText = state.newTask.trim(); // Trim the new task input value to remove any white spaces
+  if (newTaskText === "") {
+    alert("Please enter a task before adding."); // Alert the user if the new task input is empty
+  } else {
+    addTask(state, dispatch); // Call the addTask function with the state and dispatch as arguments
   }
 };
 

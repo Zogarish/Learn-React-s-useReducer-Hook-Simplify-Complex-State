@@ -6,6 +6,7 @@ import {
   toggleTaskCompletion,
   filterTasks,
   deleteTask,
+  handleAddTask,
 } from "./takeActions"; // Import the addTask, toggleTaskCompletion, filterTasks, and deleteTask functions
 
 // Create a function component called App for Task Manager Functionality
@@ -25,7 +26,13 @@ function App() {
           } // Update the newTask state with the value of the input
           placeholder="Enter a new task"
         />
-        <button onClick={() => addTask(state, dispatch)}>Add Task</button>{" "}
+        <button
+          onClick={() => {
+            handleAddTask(state, dispatch); // Call the handleAddTask function with the state and dispatch as arguments
+          }}
+        >
+          Add Task
+        </button>
         {/* Call the addTask function with the state and dispatch as arguments */}
       </div>
       <div>
