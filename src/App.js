@@ -26,17 +26,22 @@ function App() {
           } // Update the newTask state with the value of the input
           placeholder="Enter a new task"
         />
-        <button
-          onClick={() => {
-            handleAddTask(state, dispatch); // Call the handleAddTask function with the state and dispatch as arguments
-          }}
-        >
-          Add Task
-        </button>
-        {/* Call the addTask function with the state and dispatch as arguments */}
+        <div>
+          <button
+            onClick={() => {
+              handleAddTask(state, dispatch); // Call the handleAddTask function with the state and dispatch as arguments
+            }}
+          >
+            Add Task
+          </button>
+          {/* Call the addTask function with the state and dispatch as arguments */}
+          <button onClick={() => dispatch({ type: actionType.RESET_NEW_TASK })}>
+            Reset
+          </button>
+        </div>
       </div>
       <div>
-        <label>
+        <label className="all">
           <input
             type="radio"
             value="all"
@@ -47,7 +52,7 @@ function App() {
           />
           All
         </label>
-        <label>
+        <label className="completed">
           <input
             type="radio"
             value="completed"
@@ -58,7 +63,7 @@ function App() {
           />
           Completed
         </label>
-        <label>
+        <label className="incomplete">
           <input
             type="radio"
             value="incomplete"

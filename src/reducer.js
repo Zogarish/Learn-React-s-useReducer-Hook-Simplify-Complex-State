@@ -46,6 +46,11 @@ export const reducer = (state, action) => {
         ...state,
         filter: action.payload,
       }; // Return the updated state with the new filter value
+    case "RESET_NEW_TASK":
+      return {
+        ...state,
+        newTask: "",
+      }; // Return the updated state with an empty new task
     default:
       return state; // Return the current state if the action type is not recognized
   }
@@ -58,4 +63,5 @@ export const actionType = {
   DELETE_TASK: "DELETE_TASK",
   SET_NEW_TASK: "SET_NEW_TASK",
   SET_FILTER: "SET_FILTER",
+  RESET_NEW_TASK: "RESET_NEW_TASK",
 };
